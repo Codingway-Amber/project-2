@@ -74,32 +74,32 @@ img {
     }
 }
 
-.moo-forms-items {
+.link-gif-items {
     display: flex; 
     flex-direction: column;
     gap: 16px;
 }
 
 @media (min-width: 800px) {
-    .moo-forms-items {
+    .link-gif-items {
       flex-direction: row;
     }
 }
 
-.moo-forms-item {
+.link-gif-item {
     border: 1px solid #808080; 
     border-radius: 16px;
     padding: 20px;
 }
 
-.moo-forms-main { 
+.link-gif-main { 
     max-width: 800px; 
     margin-left: auto; 
     margin-right: auto; 
     padding-bottom: 20px;
 }
 
-.moo-forms-main h1 {
+.link-gif-main h1, h3, p {
     text-align: center;
 }
 

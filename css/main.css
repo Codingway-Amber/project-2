@@ -4,17 +4,10 @@ html {
 } 
 
 header {
+    padding: 16px;
     display: flex;
-    align-items: center; 
+    align-items: center;
     justify-content: space-between;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 8px;
-    padding-top: 8px;
-    position: sticky;
-    top: 0;
-    background-color: white;
-    border-bottom: 1px solid #808080;
 }
 
 @media (max-width: 999px) {
@@ -42,44 +35,7 @@ header {
     .mobile-nav-wrapper {
       display: none;
     }
-}
-
-button:hover {
-    opacity:1;
-}
-
-/* Add padding to container elements */
-.sign-up {
-    padding: 16px;
-}
-
-/* Clear floats */
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-}
-
-/* Change styles for cancel button and signup button on extra small screens */
-@media screen and (max-width: 300px) {
-    .cancelbtn, .signupbtn {
-      width: 100%;
-    }
-}
-
-.header {
-    padding: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: lightblue;
-}
-
-.main-nav {
-    display: flex;
-    justify-content: space-between;
-    gap: 16px;
-}
+} 
 
 h1 {
     font-size: 24px; 
@@ -99,18 +55,23 @@ img {
     max-width: 90px;
 }
 
-.moo-forms-main { 
-    max-width: 800px; 
-    margin-left: auto; 
-    margin-right: auto; 
-    padding-bottom: 20px;
+.form-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+@media (min-width: 800px) {
+    .form-buttons {
+      flex-direction: row;
+    }
 }
 
 .moo-forms-items {
     display: flex; 
     flex-direction: column;
     gap: 16px;
-} 
+}
 
 @media (min-width: 800px) {
     .moo-forms-items {
@@ -124,21 +85,21 @@ img {
     padding: 20px;
 }
 
+.moo-forms-main { 
+    max-width: 800px; 
+    margin-left: auto; 
+    margin-right: auto; 
+    padding-bottom: 20px;
+}
+
+label { 
+    display: block; 
+    margin-bottom: 4px;
+}
+
 .form-input { 
     border-radius: 16px; 
     margin-bottom: 16px;
-}
-
-.form-buttons {
-    display: flex; 
-    flex-direction: column;
-    gap: 4px;
-}
-
-@media (min-width: 800px) {
-    .form-buttons {
-      flex-direction: row;
-    }
 }
 
 * {box-sizing: border-box}
@@ -173,4 +134,84 @@ button {
     cursor: pointer;
     width: 100%;
     opacity: 0.9;
+}
+
+button:hover {
+    opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+    float: left;
+    width: 50%;
+}
+
+/* Add padding to container elements */
+.sign-up {
+    padding: 16px;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+      width: 100%;
+    }
+}
+
+.header {
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: lightblue;
+}
+
+.logo {
+    max-width: 100px;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+@media (max-width: 999px) {
+    .main-nav {
+      display: none;
+    }
+}
+
+.mobile-main-nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: yellow;
+    position: absolute;
+    top: 132px;
+    left: 0;
+    right: 0;
+}
+
+.mobile-main-nav a {
+    padding: 8px;
+}
+
+@media (min-width: 1000px) {
+    .mobile-nav-wrapper {
+      display: none;
+    }
 }

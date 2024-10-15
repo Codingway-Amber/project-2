@@ -3,6 +3,11 @@ html {
     scroll-behavior: smooth;
 } 
 
+body {
+    background-color: aqua;
+    /* color: beige; */
+}
+
 header {
     display: flex;
     align-items: center;
@@ -50,14 +55,35 @@ main {
 } 
 
 h1 {
+    font-family: "Sixtyfour Convergence";
     font-size: 32px; 
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+    "BLED" 0,
+    "SCAN" 0,
+    "XELA" 0,
+    "YELA" 0;
 } 
 
 @media (min-width: 800px) {
     h1 {
-        font-size: 40; 
+        font-size: 40px; 
     }
 } 
+
+h2, h3 {
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+p, label, option, select, input, textarea {
+    font-family: "Varela Round", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
 
 img {
     width: 100%;
@@ -172,7 +198,8 @@ button:hover {
 /* Clear floats */
 .clearfix {
     display: flex; 
-    gap: 8px;
+    gap: 8px; 
+    flex-direction: row-reverse;
 } 
 
 .clearfix .cancelbtn, .clearfix .signupbtn {

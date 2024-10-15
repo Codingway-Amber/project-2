@@ -13,8 +13,13 @@ header {
     padding-top: 8px;
     position: sticky;
     top: 0;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     border-bottom: 1px solid #808080;
+    z-index: 1000;
+}
+
+main {
+    margin-top: 80px;
 }
 
 @media (max-width: 999px) {
@@ -27,7 +32,7 @@ header {
     display: none;
     flex-direction: column;
     align-items: center;
-    background-color: yellow;
+    background-color: rgb(255, 255, 0);
     position: absolute;
     top: 99px;
     left: 0;
@@ -144,7 +149,9 @@ button {
     border: none;
     cursor: pointer;
     width: 100%;
-    opacity: 0.9;
+    opacity: 0.9; 
+    position: relative;
+    z-index: 1;
 }
 
 button:hover {
@@ -157,22 +164,19 @@ button:hover {
     background-color: #f44336;
 }
 
-/* Float cancel and signup buttons and add an equal width */
-.cancelbtn, .signupbtn {
-    float: left;
-    width: 50%;
-}
-
 /* Add padding to container elements */
 .sign-up {
     padding: 16px;
 }
 
 /* Clear floats */
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
+.clearfix {
+    display: flex; 
+    gap: 8px;
+} 
+
+.clearfix .cancelbtn, .clearfix .signupbtn {
+    width: 50%;
 }
 
 /* Change styles for cancel button and signup button on extra small screens */
@@ -187,7 +191,7 @@ button:hover {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: lightblue;
+    background-color: rgb(173, 216, 230);
 }
 
 .logo {
@@ -210,7 +214,7 @@ button:hover {
     display: none;
     flex-direction: column;
     align-items: center;
-    background-color: yellow;
+    background-color: rgb(255, 255, 0);
     position: absolute;
     top: 132px;
     left: 0;
@@ -219,10 +223,4 @@ button:hover {
 
 .mobile-main-nav a {
     padding: 8px;
-}
-
-@media (min-width: 1000px) {
-    .mobile-nav-wrapper {
-      display: none;
-    }
 }

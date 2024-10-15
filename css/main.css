@@ -4,8 +4,7 @@ html {
 } 
 
 body {
-    background-color: aqua;
-    /* color: beige; */
+    background-color: rgb(243, 233, 189);
 }
 
 header {
@@ -18,13 +17,42 @@ header {
     padding-top: 8px;
     position: sticky;
     top: 0;
-    background-color: rgb(255, 255, 255);
-    border-bottom: 1px solid #808080;
+    background-color: rgb(211, 126, 126);
+    color: #362120;
+    border-bottom: none;
     z-index: 1000;
 }
 
+.site-name {
+    position: absolute;
+    top: 30px;
+    left: 130px;
+    font-family: "Varela Round", sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.motto {
+    position: absolute;
+    top: 65px;
+    left: 132px;
+    font-family: "Varela Round", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+@media (max-width: 800px) {
+    .site-name{
+        font-size: 30px;
+    }
+    .motto {
+        font-size: 16px;
+    }
+}
+
 main {
-    margin-top: 80px;
+    margin-top: 50px;
 }
 
 @media (max-width: 999px) {
@@ -37,7 +65,6 @@ main {
     display: none;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(255, 255, 0);
     position: absolute;
     top: 99px;
     left: 0;
@@ -73,21 +100,43 @@ h1 {
     }
 } 
 
-h2, h3 {
+h2, h3, button {
     font-family: "Press Start 2P", system-ui;
     font-weight: 400;
     font-style: normal;
 }
 
-p, label, option, select, input, textarea {
+h2 {
+    margin: 50px;
+} 
+
+.thank-you {
+    text-align: center;
+    display: grid;
+    place-items: center;
+    margin: 10px;
+}
+
+p, label, option, select, input, textarea, a {
     font-family: "Varela Round", sans-serif;
     font-weight: 400;
+    font-size: 18px;
     font-style: normal;
+    margin: 8.5px;
+}
+
+a {
+    color: #471414;
 }
 
 img {
     width: 100%;
 } 
+
+.meme {
+    width: 400px;
+    padding: 10px;
+}
 
 .logo { 
     max-width: 90px;
@@ -118,9 +167,9 @@ img {
 }
 
 .link-gif-item {
-    border: 1px solid #808080; 
+    border: 5px solid #c45353; 
     border-radius: 16px;
-    padding: 20px;
+    padding: 12px;
 }
 
 .link-gif-main { 
@@ -153,7 +202,7 @@ input[class=email], input[class=psw] {
     margin: 5px 0 22px 0;
     display: inline-block;
     border: none;
-    background: #f1f1f1;
+    background: #ffffff;
 }
 
 input[type=text]:focus, input[type=password]:focus {
@@ -162,14 +211,14 @@ input[type=text]:focus, input[type=password]:focus {
 }
 
 hr {
-    border: 1px solid #f1f1f1;
+    border: 1px solid #695050;
     margin-bottom: 25px;
 }
 
 /* Set a style for all buttons */
 button {
-    background-color: #04AA6D;
-    color: white;
+    background-color: #31a57a;
+    color: rgb(9, 31, 12);
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
@@ -187,7 +236,8 @@ button:hover {
 /* Extra styles for the cancel button */
 .cancelbtn {
     padding: 14px 20px;
-    background-color: #f44336;
+    background-color: #b8372d;
+    color: #ffffff;
 }
 
 /* Add padding to container elements */
@@ -241,7 +291,7 @@ button:hover {
     display: none;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(255, 255, 0);
+    background-color: rgb(255, 222, 150);
     position: absolute;
     top: 132px;
     left: 0;

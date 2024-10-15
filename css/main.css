@@ -50,12 +50,12 @@ main {
 } 
 
 h1 {
-    font-size: 24px; 
+    font-size: 32px; 
 } 
 
 @media (min-width: 800px) {
     h1 {
-        font-size: 32px; 
+        font-size: 40; 
     }
 } 
 
@@ -104,7 +104,7 @@ img {
     padding-bottom: 20px;
 }
 
-.link-gif-main h1, h3, p {
+.link-gif-main h1, h2, h3, p, form {
     text-align: center;
 }
 
